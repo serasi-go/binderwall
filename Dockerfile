@@ -19,4 +19,4 @@ EXPOSE 8080
 
 # 5. Jalankan Tailscale Daemon dalam mode userspace, hubungkan ke jaringan, lalu nyalakan desktop Kasm
 # PENTING: Ganti 'tskey-auth-xxxxxx' dengan Auth Key asli dari dashboard Tailscale Anda.
-CMD ["sh", "-c", "tailscaled --tun=userspace-networking --socks5-server=localhost:1055 & sleep 3 && tailscale up --authkey=tskey-auth-xxxxxx --hostname=mybinder-desktop && /dockerstartup/kasm_default_profile.sh"]
+CMD ["sh", "-c", "tailscaled --tun=userspace-networking --socks5-server=localhost:1055 & sleep 3 && tailscale up --hostname=mybinder-desktop && /dockerstartup/kasm_default_profile.sh"]
